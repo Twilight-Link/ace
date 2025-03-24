@@ -19,6 +19,10 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+@font-face {
+  font-family: "inter";
+  src: url(fonts/inter.ttf);
+}
 
 @layer utilities {
   .text-balance {
