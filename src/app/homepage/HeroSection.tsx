@@ -48,6 +48,47 @@ export default function HeroSection() {
                         </div>
                     </div>
 
+                    <div>
+                        <div className="absolute top-[256px] left-[934px] w-[973px] h-[859px]">
+                            <img src="https://picsum.photos/820/821" className="absolute top-[38px] left-[153px] w-[820px] h-[821px]" />
+                            <div className="absolute top-[412px] left-[0px] size-[250px]">
+                                <div className="absolute top-[0px] left-[0px] size-[250px] bg-[#4d53e6]/80 rounded-[30px]"></div>
+                                <svg className="absolute top-[19px] left-[23px] size-[50px]"></svg>
+                                <div className="text-[#fdfeff] font-semibold text-2xl leading-[1.2] absolute top-[33px] left-[88px]">
+                                    Graduation
+                                </div>
+                                <div className="text-[#fdfeff] text-lg leading-[1.2] absolute top-[117px] left-[21px] w-[217px]">
+                                    Graduation is not the end; it's the beginning of a new journey filled with endless possibilities.
+                                </div>
+                            </div>
+                            <div className="absolute top-[0px] left-[100px] w-[250px] h-[237px]">
+                                <div className="absolute top-[0px] left-[0px] w-[250px] h-[237px] bg-[#4d53e6]/80 rounded-[30px]"></div>
+                                <svg className="absolute top-[19px] left-[18px] size-[50px]"></svg>
+                                <div className="text-[#fdfeff] font-semibold capitalize text-2xl leading-[1.2] absolute top-[33px] left-[84px]">
+                                    company
+                                </div>
+                                <div className="text-[#f8f1f1] text-sm leading-[1.2] absolute top-[105px] left-[21px] w-[217px]">
+                                    Strong company relations in a college open doors to career opportunities, internships, and real-world industry exposure.
+                                </div>
+                            </div>
+                            <div className="absolute top-[221px] left-[620px] size-[250px]">
+                                <div className="absolute top-[0px] left-[0px] size-[250px] bg-[#4d53e6]/80 rounded-[30px]"></div>
+                                <svg className="absolute top-[25px] left-[25px] size-[50px]"></svg>
+                                <div className="text-[#fdf7f7]/90 font-semibold capitalize text-2xl leading-[1.2] absolute top-[37px] left-[89px]">
+                                    Achivement
+                                </div>
+                                <div className="text-[#c8c6c6] font-medium text-lg leading-[1.2] absolute top-[103px] left-[28px] w-[200px]">
+                                    The achievements we earn in college shape our future, proving that dedication and passion lead to success.
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    w
+
 
 
                 </div>
