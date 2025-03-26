@@ -1,5 +1,5 @@
 import { AcademicCapIcon, BuildingOfficeIcon, TrophyIcon  } from '@heroicons/react/24/outline';
-import "./css/style.css"
+import "./css/Bentostyle.css"
 
 export default function BentoGridHeroSection() {
     return (
