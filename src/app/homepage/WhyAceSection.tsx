@@ -19,7 +19,7 @@ export default function WhyAceSection() {
                                 <p className="text-[#c8c6c6] font-medium capitalize text-base leading-[1.2] relative max-w-xl">
                                     ACE College of Engineering, founded in 2013 by Manarul Huda Trust, is a leading institution in Thiruvananthapuram, known for its excellence in professional and value-based education. With advanced facilities and a strong focus on technical and ethical growth, ACE nurtures young minds, empowering them for a bright future.
                                 </p>
-                                <a href="#" className="rounded-md bg-[#4c52e6] px-3.5 py-2.5 w-fit text-lg  text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Apply Now</a>
+                                <a href="#" className="rounded-md bg-[#4c52e6] px-3.5 py-2.5 w-fit text-lg  text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Explore 360</a>
                             </div>
 
 

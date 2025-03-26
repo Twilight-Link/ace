@@ -8,7 +8,7 @@ export default function BentoGridHeroSection() {
 
             <div className="parent relative m-10">
                 <div className="div1 w-44">
-                    <div className='rounded-lg bg-[#4d53e6] flex-col flex justify-center'>
+                    <div className='rounded-lg bg-[#4d53e6] opacity-70 flex-col flex justify-center'>
                         <div className="flex px-2 py-2">
                             <div className="flex-auto"><BuildingOfficeIcon className='size-6' /></div>
                             <div className="flex-auto ">Company</div>
@@ -19,7 +19,7 @@ export default function BentoGridHeroSection() {
                     </div>
                 </div>
                 <div className="div2 w-44">
-                    <div className='rounded-lg bg-[#4d53e6] flex-col flex justify-center'>
+                    <div className='rounded-lg bg-[#4d53e6] opacity-70 flex-col flex justify-center'>
                         <div className="flex px-2 py-2">
                             <div className="flex-auto"><AcademicCapIcon className='size-6' /></div>
                             <div className="flex-auto ">Graduation</div>
@@ -30,7 +30,7 @@ export default function BentoGridHeroSection() {
                     </div>
                 </div>
                 <div className="div3 w-44">
-                    <div className='rounded-lg bg-[#4d53e6] flex-col flex justify-center'>
+                    <div className='rounded-lg bg-[#4d53e6] opacity-70 flex-col flex justify-center'>
                         <div className="flex px-2 py-2">
                             <div className="flex-auto"><TrophyIcon className='size-6' /></div>
                             <div className="flex-auto ">Achivement</div>
