@@ -1,93 +1,100 @@
 import React from "react";
-
 const Footer = () => {
   return (
     <footer className="bg-black">
     <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-        {/* Company Info */}
-        <div>
-          <img src="#" className="mr-5 h-6 sm:h-9" alt="logo" />
-          <p className="max-w-xs mt-4 text-sm text-white">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
+        
+        <div className="relative top-[-66px] text-xl">
+        <img src="/logos/Footerlogo/ACE LOGO copy.png" className="h-[200px]" alt="logo" />
+          <p className="max-w-xs ml-2  mt-0  text-white/60">
+           
             info@Acetvm.Com
             <br />
             (+91)-0471-7117777/87/97
             <br />
             (+91)-0471-2384437/47
           </p>
-          <p >
-            For Admission enquries:
+          <p className=" ml-2 max-w-xs mt-4 text-white/60">
+            For Admission Enquiries:
             <br />
             (+91) 9562781288
           </p>
-          <p>
-            For General enquries:
+          <p className="ml-2 max-w-xs mt-4 text-white/60">
+            For General Enquiries:
             <br />
             (+91) 8281711677
           </p>
           <div className="flex mt-8 space-x-6">
-            {/* Social Icons - Replace with your own components */}
             <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
-             
+            <img src="logos/Footerlogo/icons8-facebook-50.png" alt="Facebook" className="w-10 h-10" />
             </a>
             <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
-            
+            <img src="logos/Footerlogo\icons8-instagram-100.png" alt="Instagram" className="w-10 h-10" />
             </a>
             <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
-              {/* <YourWhatsAppIcon /> */}
+            <img src="logos/Footerlogo\icons8-whatsapp-50.png" alt="Whatsapp" className="w-10 h-10" />
             </a>
             <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
-              {/* <YourLinkedInIcon /> */}
+            <img src="logos/Footerlogo\icons8-twitter-50.png" alt="Twitter" className="w-10 h-10" />
+            </a>
+            <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
+            <img src="logos/Footerlogo\icons8-linkedin-50.png" alt="linkedin" className="w-10 h-10" />
             </a>
           </div>
         </div>
-
-        {/* Navigation Links */}
-        <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
+  
+        <div className="grid grid-cols-1 gap-12 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-3">
           <div>
-            <p className="font-medium text-white">Company</p>
-            <nav className="flex flex-col mt-4 space-y-2 text-sm text-white">
-              <a className="hover:opacity-75" href="#"> About </a>
-              <a className="hover:opacity-75" href="#"> Meet the Team </a>
-              <a className="hover:opacity-75" href="#"> History </a>
+            <p className="text-3xl text-white font-semibold">LINKS</p>
+            <nav className="flex flex-col mt-4 space-y-3 text-xl text-white/60">
+              <a className="hover:opacity-75" href="#"> Mandatory Disclosure </a>
+              <a className="hover:opacity-75" href="#"> HR Policy </a>
+              <a className="hover:opacity-75" href="#"> Audited Statement </a>
+              <a className="hover:opacity-75" href="#"> About KTU </a>
+              <a className="hover:opacity-75" href="#"> Scholarship </a>
+              <a className="hover:opacity-75" href="#"> Media </a>
+              <a className="hover:opacity-75" href="#"> AICTE EoA </a>
+              <a className="hover:opacity-75" href="#"> Report A Grievance </a>
+              <a className="hover:opacity-75" href="#"> 360 Virtual Tour</a>
+            </nav>
+          </div>
+          <div>
+            <p className="text-3xl text-white font-semibold">SUPPORT</p>
+            <nav className="flex flex-col mt-4 space-y-3 text-xl text-white/60">
               <a className="hover:opacity-75" href="#"> Careers </a>
+              <a className="hover:opacity-75" href="#"> Help Us Ticket </a>
+              <a className="hover:opacity-75" href="#"> College Portal </a>
+              <a className="hover:opacity-75" href="#"> MH Trust WFM </a>
             </nav>
           </div>
           <div>
-            <p className="font-medium text-white">Services</p>
-            <nav className="flex flex-col mt-4 space-y-2 text-sm text-white">
-              <a className="hover:opacity-75" href="#"> 1on1 Coaching </a>
-              <a className="hover:opacity-75" href="#"> Company Review </a>
-              <a className="hover:opacity-75" href="#"> Accounts Review </a>
-              <a className="hover:opacity-75" href="#"> HR Consulting </a>
-              <a className="hover:opacity-75" href="#"> SEO Optimization </a>
-            </nav>
-          </div>
-          <div>
-            <p className="font-medium text-white">Helpful Links</p>
-            <nav className="flex flex-col mt-4 space-y-2 text-sm text-white">
-              <a className="hover:opacity-75" href="#"> Contact </a>
-              <a className="hover:opacity-75" href="#"> FAQs </a>
-              <a className="hover:opacity-75" href="#"> Live Chat </a>
-            </nav>
-          </div>
-          <div>
-            <p className="font-medium text-white">Legal</p>
-            <nav className="flex flex-col mt-4 space-y-2 text-sm text-white">
-              <a className="hover:opacity-75" href="#"> Privacy Policy </a>
-              <a className="hover:opacity-75" href="#"> Terms & Conditions </a>
-              <a className="hover:opacity-75" href="#"> Returns Policy </a>
-              <a className="hover:opacity-75" href="#"> Accessibility </a>
-            </nav>
+            <p className="text-3xl text-white font-semibold">OUR ADDRESS</p>
+            <div className="mt-4 w-80 h-60">
+              <iframe
+                className="w-full h-full"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.6358121624044!2d76.96396270974697!3d8.437377597935852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05a52ae61f4da3%3A0xcde797935b0f0d75!2sACE%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1742918154016!5m2!1sen!2sin"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <p className="mt-4 text-xl text-white/75">
+              ACE College of Engineering
+              <br />
+              Thiruvallam P.O, Thiruvananthapuram
+              <br />
+              Kerala - 695027
+            </p>
           </div>
         </div>
       </div>
-
-      {/* Centered Copyright */}
-      <p className="mt-8 text-xs text-white text-center">© 2022 Company Name</p>
+  
+      <div class="relative  left-[0px] w-full h-[5px] bg-[#fffdfd]"></div>
+      <p className="mt-12 text-base text-white text-center">Copyright © 2025</p>
     </div>
   </footer>
-
+  
 
   );
 };
