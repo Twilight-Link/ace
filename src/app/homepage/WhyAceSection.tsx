@@ -1,3 +1,4 @@
+import BentoGrid2 from "../component/Bentogrid2";
 
 
 export default function WhyAceSection() {
@@ -25,7 +26,7 @@ export default function WhyAceSection() {
                         </div>
                     </div>
 
-                    {/* <BentoGridHeroSection/> */}
+                   <BentoGrid2/>
 
 
                 </div>
