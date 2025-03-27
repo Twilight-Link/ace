@@ -3,8 +3,8 @@ import "./css/Bentostyle.css"
 
 export default function BentoGridHeroSection() {
     return (
-        <div className='lg:max-w-lg overflow-visible relative '>
-            <img src='/bg/girl_cover.png' className='absolute -top-4 left-32 w-auto h-auto'></img>
+        <div className='lg:max-w-lg overflow-visible relative -top-14'>
+            <img src='/bg/girl_cover.png' className='absolute left-32 w-auto -top-5'></img>
 
             <div className="parent relative m-10">
                 <div className="div1 w-44">

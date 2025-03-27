@@ -9,14 +9,14 @@ export default function CourcesList() {
             description: 'focuses on the design, development, and application of electrical systems and electronic devices across various industries',
             imageUrl:
                 '/icons/bolt.png',
-            gif: ''
+            gif: '/courcegifs/Electrician.gif'
         },
         {
             courceName: 'Aeronotical engineering',
             description: 'Explore the science of flight, aerospace technology, and aircraft design.',
             imageUrl:
                 '/icons/fly.png',
-            gif: ''
+            gif: '/courcegifs/Flying around the world.gif'
 
         },
         {
@@ -24,6 +24,7 @@ export default function CourcesList() {
             description: 'Mechatronics Engineering integrates mechanical, electrical, and computer engineering to design automated systems.',
             imageUrl:
                 '/icons/mechatronics.png.png',
+            gif: '/courcegifs/Time machine (1).gif'
 
         },
         {
@@ -31,7 +32,7 @@ export default function CourcesList() {
             description: 'focuses on the design and development of electronic systems and communication technologies.',
             imageUrl:
                 '/icons/radio-station.png.png',
-            gif: ''
+            gif: '/courcegifs/Printed circuit board.gif'
 
         },
         {
@@ -39,7 +40,7 @@ export default function CourcesList() {
             description: 'focuses on the design and development of electronic systems and communication technologies.',
             imageUrl:
                 '/icons/radio-station.png.png',
-            gif: ''
+            gif: '/courcegifs/Bricklayer.gif'
 
         },
 
@@ -62,22 +63,22 @@ export default function CourcesList() {
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                 <div className="overflow-y-scroll h-96 scroll-smooth scrollbar-hide">
                     <ul role="list" className="divide-y divide-gray-100">
-                        {Cources.map((person, index) => (
+                        {Cources.map((cource, index) => (
                             <li key={index} className="flex justify-between gap-x-6 py-5">
-                                <div className="flex min-w-0 gap-x-4">
-                                    <img alt="" src={person.imageUrl} className="size-12 flex-none" />
+                                <div className="flex min-w-0 gap-x-4" onClick={() => { setGif(cource.gif) }}>
+                                    <img alt="" src={cource.imageUrl} className="size-12 flex-none" />
                                     <div className="min-w-0 flex-auto">
-                                        <p className="text-lg font-bold font-inter capitalize text-gray-900">{person.courceName}</p>
-                                        <p className="mt-1 truncate text-xs/5 capitalize text-gray-500">{person.description}</p>
+                                        <p className="text-lg font-bold font-inter capitalize text-gray-900">{cource.courceName}</p>
+                                        <p className="mt-1 truncate text-xs/5 capitalize text-gray-500">{cource.description}</p>
                                     </div>
                                 </div>
                             </li>
                         ))}
                     </ul>
                 </div>
-                
-                <img src="/courcegifs/Flying around the world.gif" className="w-96 mx-32"/>
-          
+
+                <img src={currentGif} className="w-96 mx-32" />
+
 
 
 
