@@ -2,7 +2,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="bg-black">
-    <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+    <div className=" px-4 py-16 mx-auto sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
         
         <div className="relative top-[-66px] text-xl">
@@ -44,8 +44,8 @@ const Footer = () => {
           </div>
         </div>
   
-        <div className="grid grid-cols-1 gap-12 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-3">
-          <div>
+        <div className="grid grid-cols-1 gap-auto lg:col-span-2 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="w-auto">
             <p className="text-3xl text-white font-semibold">LINKS</p>
             <nav className="flex flex-col mt-4 space-y-3 text-xl text-white/60">
               <a className="hover:opacity-75" href="#"> Mandatory Disclosure </a>
@@ -68,17 +68,17 @@ const Footer = () => {
               <a className="hover:opacity-75" href="#"> MH Trust WFM </a>
             </nav>
           </div>
-          <div>
+          <div >
             <p className="text-3xl text-white font-semibold">OUR ADDRESS</p>
-            <div className="mt-4 w-80 h-60">
+            
               <iframe
-                className="w-full h-full"
+                className="w-[90%] h-[40%]"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.6358121624044!2d76.96396270974697!3d8.437377597935852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05a52ae61f4da3%3A0xcde797935b0f0d75!2sACE%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1742918154016!5m2!1sen!2sin"
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
-            </div>
+            
             <p className="mt-4 text-xl text-white/75">
               ACE College of Engineering
               <br />
