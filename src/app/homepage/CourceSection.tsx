@@ -1,3 +1,4 @@
-export default function CourcesList(){
-    
+export default function CourcesList() {
+    return (<div></div>)
+
 }
