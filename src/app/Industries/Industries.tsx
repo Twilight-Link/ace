@@ -5,13 +5,13 @@ export default function Industries() {
             style={{
                 background: "black",
                 backgroundImage: "url('/backgroundSvg/svg-path.svg')",
-                backgroundSize: "fill",
+                backgroundSize: "150%",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
             }}
         >
             <div className="absolute top-[-43.98vw] left-[-15.57vw] w-[100vw] h-[35.52vw] blur-[5.21vw]"></div>
-            <div className="text-white font-extrabold uppercase text-[4.06vw] leading-[1.7] absolute top-[7.76vw] justify-center w-full text-center">
+            <div className="text-white font-extrabold uppercase text-[3.3vw] leading-[1.7] absolute top-[7.76vw] justify-center w-full text-center">
                 Our Industrial relation
             </div>
             <div className="absolute top-[21.61vw] left-0 w-full flex justify-between px-[9.15vw]">
