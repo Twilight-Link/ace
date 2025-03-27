@@ -14,7 +14,7 @@ export default function Principal(){
             // }}
         >
 
-            <div className="font-black uppercase text-6xl leading-[1.2] pt-16 pl-20 w-[446px]">
+            <div className="font-black uppercase text-6xl text-black leading-[1.2] pt-16 pl-20 w-[446px]">
                 MEET OUR <p className="text-blue-700">PRINCIPAL</p>
             </div>
             <div className="flex flex-col md:flex-col lg:flex-row justify-around items-center flex-wrap gap-2 p-4 h-auto">

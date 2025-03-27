@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        customBlue: '#1219e4',
       },
       fontFamily: {
         sans: ['var(--font-inter)'],

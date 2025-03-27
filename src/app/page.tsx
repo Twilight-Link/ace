@@ -5,14 +5,16 @@ import WhyAceSection from "./homepage/WhyAceSection";
 import Industries from "./Industries/Industries";
 import CourcesList from "./homepage/CourceSection";
 import Principal from "./Principal/Principal";
+import HallOfFame from "./halloffame/halloffame";
 export default function Home() {
   return (<div className="select-none">
     <NavBar />
     <HeroSection />
     <WhyAceSection />
     <CourcesList/>
-    <Principal/>
+    <HallOfFame/>
     <Industries/>
+    <Principal/>
     <Footer />
 
   </div>
