@@ -13,7 +13,7 @@ export default function HeroSection() {
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                     <div className="lg:pt-2 lg:pr-8">
                         <div className="lg:max-w-lg">
-                            <div className="relative w-max h-screen flex flex-col gap-7">
+                            <div className="relative w-max  flex flex-col gap-7">
                                 <h1 className="font-black capitalize text-6xl leading-[1.2] max-w-2xl text-start">
                                     The <span className='text-[#4c52e6]'> best place</span>  to chase your <br /> <span className='text-[#4c52e6]' >dreams</span>
                                 </h1>
