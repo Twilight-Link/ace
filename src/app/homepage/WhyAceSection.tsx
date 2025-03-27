@@ -4,7 +4,7 @@ import BentoGrid2 from "../component/Bentogrid2";
 export default function WhyAceSection() {
 
     return (
-        <div className="overflow-hidden py-4 sm:py-6 select-none">
+        <div className="overflow-hidden py-4 sm:py-6 select-none relative">
 
             <img src="/backgroundSvg/svg_why_ace.svg"  className="absolute left-96 "></img>
 
