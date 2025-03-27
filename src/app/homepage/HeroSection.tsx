@@ -7,7 +7,7 @@ export default function HeroSection() {
     return (
         <div className="overflow-hidden pt-24 sm:pt-32 select-none">
 
-            <img src='/bg/IMG-20250318-WA0000.jpg' className='opacity-15 -z-50 w-full object-cover object-center h-full absolute top-3 left-0'></img>
+            <img src='/bg/IMG-20250318-WA0000.jpg' className='opacity-40 -z-50 w-full object-cover object-center h-full absolute top-3 left-0'></img>
 
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
