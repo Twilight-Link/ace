@@ -6,7 +6,7 @@ const Epoch = () => {
    style={{
     background: "white",
     backgroundRepeat: "no-repeat, no-repeat",
-    backgroundImage: "url('epoch-svg-bottom.png'), url('epoch-svg-top.png')",
+    backgroundImage: "url('backgroundSvg/epoch-svg-bottom.png'), url('backgroundSvg/epoch-svg-top.png')",
     backgroundPosition: "bottom left, top right",
   }}>
    <div class="font-black text-black uppercase text-[78px] leading-[1.2] absolute top-[28px] left-[39px] w-[700px] h-[270px]">

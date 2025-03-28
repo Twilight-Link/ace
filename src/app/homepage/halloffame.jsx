@@ -4,7 +4,7 @@ export default function HallOfFame() {
     style={{
       background : "black",
       backgroundRepeat: "no-repeat",
-      backgroundImage :"url('svg-bottom.png'), url('svg-top.png')",
+      backgroundImage :"url('backgroundSvg/svg-bottom-hof.png'), url('backgroundSvg/svg-top-hof.png')",
       backgroundSize: "30%, 50%",
       backgroundPosition : "bottom left,top right", }}>
       {/* Left Column */}
@@ -18,7 +18,7 @@ export default function HallOfFame() {
             alt="Graduation Cap Icon"
           />
         </h2>
-        <div className="h-[85%] w-[85%] relative text-lg lg:mt-16">
+        <div className="h-[85%] w-[85%] relative text-lg lg:mt-16 font-inter">
          
           Celebrating the achievements of our outstanding graduates! Our alumni have made their mark in top companies worldwide, 
           showcasing excellence, innovation, and leadership.<br/><br/>Meet our stars who continue to inspire the next generation.

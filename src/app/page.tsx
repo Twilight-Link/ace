@@ -7,6 +7,7 @@ import CourcesList from "./homepage/CourceSection";
 import Principal from "./homepage/Principal";
 import HallOfFame from "./homepage/halloffame";
 import Epoch from "./homepage/epoch";
+import NewsAndUpdates from "./homepage/NewsAndUpdates";
 
 export default function Home() {
   return (<div className="select-none">
@@ -14,6 +15,7 @@ export default function Home() {
     <HeroSection />
     <WhyAceSection />
     <CourcesList/>
+    <NewsAndUpdates/>
     <Epoch/>
     <HallOfFame/>
     <Industries/>
