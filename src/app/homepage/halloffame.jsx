@@ -14,7 +14,7 @@ export default function HallOfFame() {
           <p className="text-customBlue">FAME</p>
           <img
             src="logos/svg.png"
-            className="relative top-[-75px] left-[200px] w-[5vw] h-[5vw]"
+            className="relative top-[-65px] left-[160px] w-[5vw] h-[5vw]"
             alt="Graduation Cap Icon"
           />
         </h2>
