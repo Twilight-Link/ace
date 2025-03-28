@@ -56,7 +56,7 @@ export default function CourcesList() {
 
 
     return (<div className="w-full relative py-10 bg-white flex flex-col gap-4 z-10">
-        <h1 className="w-full text-center text-5xl font-inter font-bold text-black">Explore our cources</h1>
+        <h1 className="w-full text-center text-5xl font-inter font-bold text-black">Explore our courses</h1>
         <h3 className="w-full text-center text-3xl font inter font-medium text-black">Shaping future engineers with cutting-edge skills.</h3>
 
         <div className="mx-auto max-w-7xl w-full px-6 lg:px-8">
