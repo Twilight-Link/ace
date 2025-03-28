@@ -14,7 +14,8 @@ export default function Industries() {
                 Our Industrial relation
             </div>
             <div className="absolute top-[21.61vw] left-0 w-full flex justify-between items-center px-[9.15vw]">
-                <embed src="logos/industriesLogo/TATA.svg" type="image/svg+xml" className="w-[10.52vw] h-[12.5vw]" />
+                {/* <embed src="logos/industriesLogo/TCS-crop.svg" type="image/svg+xml" className="w-[12.52vw] h-[12.5vw]" /> */}
+                <img src="logos/industriesLogo\TCS-crop.png" className="w-[12.02vw] h-[12.02vw]" />
                 <img src="logos/industriesLogo\icons8-apple-250.png" className="w-[11.02vw] h-[11.02vw]" />
                 <img src="logos/industriesLogo\icons8-windows-250.png" className="w-[11.02vw] h-[11.02vw]" />
                 <img src="logos/industriesLogo\google-icon.svg" className="w-[9.02vw] h-[11.02vw]" />
