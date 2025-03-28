@@ -1,5 +1,6 @@
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import BentoGridHeroSection from '../component/bentogrid'
+import { motion } from 'framer-motion'
 
 
 
@@ -10,7 +11,10 @@ export default function HeroSection() {
             <img src='/bg/IMG-20250318-WA0000.jpg' className='opacity-40 -z-50 w-full object-cover object-center h-full absolute top-3 left-0'></img>
 
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+                <motion.div
+                    initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}
+
+                    className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                     <div className="lg:pt-2 lg:pr-8">
                         <div className="lg:max-w-lg">
                             <div className="relative w-max  flex flex-col gap-7">
@@ -27,10 +31,10 @@ export default function HeroSection() {
                         </div>
                     </div>
 
-                    <BentoGridHeroSection/>
+                    <BentoGridHeroSection />
 
 
-                </div>
+                </motion.div>
             </div>
         </div>
     )
