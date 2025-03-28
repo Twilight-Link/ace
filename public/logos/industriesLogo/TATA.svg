@@ -22,7 +22,11 @@
 </g>
 </g>
 </g>
-<g transform="matrix(1 0 0 1 522.25 995.02)" style="" id="817ef7a8-8224-4087-a3c0-fb456b1232e2"  >
-		<text xml:space="preserve" font-family="Arial	" font-size="87" font-style="normal" font-weight="700" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1; white-space: pre;" ><tspan x="-113.36" y="27.33" >T</tspan><tspan x="-29.32" y="27.33" >C</tspan><tspan x="67.25" y="27.33" >S</tspan></text>
+<g transform="matrix(1 0 0 1 522.25 995.02)" style="" id="817ef7a8-8224-4087-a3c0-fb456b1232e2">
+    <text xml:space="preserve" font-family="Arial" font-size="150" font-style="normal" font-weight="700" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1; white-space: pre;">
+        <tspan x="-200" y="100">T</tspan>
+        <tspan x="-50" y="100">C</tspan>
+        <tspan x="120" y="100">S</tspan>
+    </text>
 </g>
 </svg>
