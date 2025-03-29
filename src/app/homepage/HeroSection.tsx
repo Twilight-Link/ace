@@ -40,7 +40,6 @@ export default function HeroSection() {
 
                     <BentoGridHeroSection />
 
-
                 </div>
             </div>
         </div>
