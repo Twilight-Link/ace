@@ -86,7 +86,7 @@ export default function NewsAndUpdates(){
                         <ul role="list" >
                             {News.map((news, index) => (
                                 <li key={index} className=" justify-between gap-x-6 py-2">
-                                    <div className="flex min-w-0 gap-x-4 bg-[#f8faff]/15 p-5 rounded-lg">
+                                    <div className="flex min-w-0 gap-x-4 bg-[#1f1f1f] p-5 rounded-lg">
                                         <img alt="" src={news.imageUrl} className="w-24 flex-none" />
                                         <div className="min-w-0 flex-auto">
                                             <p className="text-lg font-bold font-inter capitalize text-white">{news.courceName}</p>
