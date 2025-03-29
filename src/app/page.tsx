@@ -17,7 +17,7 @@ export default function Home() {
     <CourcesList/>
     <NewsAndUpdates/>
     <Epoch/>
-    <HallOfFame/>
+    {/* <HallOfFame/> */}
     <Industries/>
     <Principal/>
     <Footer />
