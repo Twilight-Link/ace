@@ -58,7 +58,14 @@ export default function NewsAndUpdates(){
     ]
 
     return(
-        <div className="flex flex-col md:flex-row gap-8 p-12">
+        <div className="flex flex-col md:flex-row gap-8 p-12"
+        style={{
+            background: "black",
+            backgroundRepeat: "no-repeat, no-repeat",
+            backgroundSize:"40%, 50%",
+            backgroundImage: "url('backgroundSvg/svg-newsUpdates-left.png'), url('backgroundSvg/svg-newsUpdates-right.png')",
+            backgroundPosition: "bottom left,bottom right",
+          }}>
             {/* Left Div */}
             <div className="flex-1 h-full p-8">
                 <h2 className="text-5xl font-black uppercase mb-4">News<span className='text-[#4c52e6]'> &</span>  <br/>Updates</h2>

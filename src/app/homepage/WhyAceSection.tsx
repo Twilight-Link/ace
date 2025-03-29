@@ -34,7 +34,14 @@ export default function WhyAceSection() {
     }
 
     return (
-        <div className="overflow-hidden py-4 sm:py-6 select-none relative">
+        <div className="overflow-hidden py-4 sm:py-6 select-none relative"
+        style={{
+            background: "black",
+            backgroundRepeat: "no-repeat",
+            backgroundSize:"50%",
+            backgroundImage: "url('backgroundSvg/svg-whyAce.png')",
+            backgroundPosition: "bottom right",
+          }}>
 
             <img src="/backgroundSvg/svg_why_ace.svg" className="absolute left-96 "></img>
 
