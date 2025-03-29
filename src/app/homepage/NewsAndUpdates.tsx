@@ -4,14 +4,14 @@ export default function NewsAndUpdates(){
             courceName: 'Electrical & electronics engineering',
             description: 'focuses on the design, development, and application of electrical systems and electronic devices across various industries',
             imageUrl:
-                '/icons/bolt.png',
+                'NewsAndUpdates/EEE1.png',
             gif: '/courcegifs/Electrician.gif'
         },
         {
             courceName: 'Aeronotical engineering',
             description: 'Explore the science of flight, aerospace technology, and aircraft design.',
             imageUrl:
-                '/icons/fly.png',
+                'NewsAndUpdates/EEE2.png',
             gif: '/courcegifs/Flying around the world.gif'
 
         },
@@ -19,7 +19,7 @@ export default function NewsAndUpdates(){
             courceName: 'mechatronics engineering',
             description: 'Mechatronics Engineering integrates mechanical, electrical, and computer engineering to design automated systems.',
             imageUrl:
-                '/icons/mechatronics.png.png',
+                'NewsAndUpdates/EEE3.png',
             gif: '/courcegifs/Time machine (1).gif'
 
         },
@@ -27,7 +27,7 @@ export default function NewsAndUpdates(){
             courceName: 'Electronics & communication engineering',
             description: 'focuses on the design and development of electronic systems and communication technologies.',
             imageUrl:
-                '/icons/radio-station.png.png',
+                'NewsAndUpdates/EEE1.png',
             gif: '/courcegifs/Printed circuit board.gif'
 
         },
@@ -35,7 +35,7 @@ export default function NewsAndUpdates(){
             courceName: 'Civil Engineering',
             description: 'focuses on the design and development of electronic systems and communication technologies.',
             imageUrl:
-                '/icons/radio-station.png.png',
+                'NewsAndUpdates/EEE2.png',
             gif: '/courcegifs/Bricklayer.gif'
 
         },
@@ -43,7 +43,7 @@ export default function NewsAndUpdates(){
             courceName: 'Civil Engineering',
             description: 'focuses on the design and development of electronic systems and communication technologies.',
             imageUrl:
-                '/icons/radio-station.png.png',
+                'NewsAndUpdates/EEE3.png',
             gif: '/courcegifs/Bricklayer.gif'
 
         },
@@ -51,7 +51,7 @@ export default function NewsAndUpdates(){
             courceName: 'Civil Engineering',
             description: 'focuses on the design and development of electronic systems and communication technologies.',
             imageUrl:
-                '/icons/radio-station.png.png',
+                'NewsAndUpdates/EEE1.png',
             gif: '/courcegifs/Bricklayer.gif'
 
         },
@@ -79,11 +79,11 @@ export default function NewsAndUpdates(){
                         <ul role="list" >
                             {News.map((news, index) => (
                                 <li key={index} className=" justify-between gap-x-6 py-2">
-                                    <div className="flex min-w-0 gap-x-4 bg-gray-200 p-5 rounded-lg">
-                                        <img alt="" src={news.imageUrl} className="size-12 flex-none" />
+                                    <div className="flex min-w-0 gap-x-4 bg-[#f8faff]/15 p-5 rounded-lg">
+                                        <img alt="" src={news.imageUrl} className="w-24 flex-none" />
                                         <div className="min-w-0 flex-auto">
-                                            <p className="text-lg font-bold font-inter capitalize text-gray-900">{news.courceName}</p>
-                                            <p className="mt-1 truncate text-xs/5 capitalize text-gray-500">{news.description}</p>
+                                            <p className="text-lg font-bold font-inter capitalize text-white">{news.courceName}</p>
+                                            <p className="mt-1 text-base/5 capitalize text-white ">{news.description}</p>
                                         </div>
                                     </div>
                                 </li>
