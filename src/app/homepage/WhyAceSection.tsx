@@ -1,16 +1,50 @@
+'use client'
 import BentoGrid2 from "../component/Bentogrid2";
-
+import { motion, useAnimation, useInView } from 'framer-motion'
+import { useEffect, useRef } from 'react';
 
 export default function WhyAceSection() {
+    const scrollRef = useRef(null);
+    const isInview = useInView(scrollRef, { once: true });
+    const mainDivController = useAnimation();
+
+    useEffect(() => {
+        if (isInview) {
+            mainDivController.start("visible");
+        }
+    }, [isInview])
+
+
+    const heroTitleSectiion = {
+        hidden: { opacity: 0, y: 75, x: 75 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            x: 0,
+            transition: { duration: 2.5, ease: "easeIn" },
+        },
+    }
+    const GridSectiion = {
+        hidden: { opacity: 0, x: 75 },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: { duration: 2.5, ease: "linear" },
+        },
+    }
 
     return (
         <div className="overflow-hidden py-4 sm:py-6 select-none relative">
 
-            <img src="/backgroundSvg/svg_why_ace.svg"  className="absolute left-96 "></img>
+            <img src="/backgroundSvg/svg_why_ace.svg" className="absolute left-96 "></img>
 
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8" ref={scrollRef}>
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-                    <div className="lg:pr-8">
+                    <motion.div
+                        variants={heroTitleSectiion}
+                        initial="hidden"
+                        animate={mainDivController}
+                        className="lg:pr-8">
                         <div className="lg:max-w-lg">
                             <div className="relative w-max flex flex-col gap-7">
                                 <h1 className="font-black capitalize text-6xl leading-[1.2] max-w-2xl text-start">
@@ -24,9 +58,18 @@ export default function WhyAceSection() {
 
 
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <BentoGrid2 />
+
+
+                    <motion.div
+                        initial="hidden"
+                        animate={mainDivController}
+                        variants={GridSectiion}
+                    >
+                        <BentoGrid2 />
+                    </motion.div>
+
 
 
                 </div>
