@@ -16,12 +16,11 @@ export default function WhyAceSection() {
 
 
     const heroTitleSectiion = {
-        hidden: { opacity: 0, y: 75, x: 75 },
+        hidden: { opacity: 0, y: 75 },
         visible: {
             opacity: 1,
             y: 0,
-            x: 0,
-            transition: { duration: 2.5, ease: "easeIn" },
+            transition: { duration: 1.5, ease: "easeIn" },
         },
     }
     const GridSectiion = {
@@ -29,7 +28,7 @@ export default function WhyAceSection() {
         visible: {
             opacity: 1,
             x: 0,
-            transition: { duration: 2.5, ease: "linear" },
+            transition: { duration: 1.5, ease: "linear" },
         },
     }
 

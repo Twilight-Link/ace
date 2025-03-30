@@ -25,7 +25,7 @@ export default function HeroSection() {
         visible: {
             opacity: 1,
             x: 0,
-            transition: { duration: 1, ease: "easeIn" },
+            transition: { duration: 0.5, ease: "easeIn" },
         },
     }
     const GridSectiion = {
@@ -33,7 +33,7 @@ export default function HeroSection() {
         visible: {
             opacity: 1,
             y: 0,
-            transition: { duration: 1, ease: "linear" },
+            transition: { duration: 0.5, ease: "linear" },
         },
     }
 

@@ -1,11 +1,15 @@
+'use client'
 import { AcademicCapIcon, BuildingOfficeIcon, TrophyIcon } from '@heroicons/react/24/outline';
 import "./css/Bentostyle.css"
 import { motion, useAnimation, useInView } from 'framer-motion'
+import Image from 'next/image';
 
 export default function BentoGridHeroSection() {
     return (
         <div className='lg:max-w-lg overflow-visible relative bottom-0'>
-            <img src='/bg/girl_cover.png' className='absolute left-32 w-auto -top-5'></img>
+            {/* <img src='/bg/girl_cover.png' className='absolute left-32 w-auto -top-5' alt=''></img> */}
+
+            <Image src={"/bg/girl_cover.png"} className='absolute left-32 w-auto -top-5' alt='loading..' width={550} height={550}></Image>
 
             <div className="parent relative m-10 mb-0">
                 <motion.div
