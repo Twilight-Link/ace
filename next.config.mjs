@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  compress: false,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
+  output: "export",
+};
 
 export default nextConfig;
