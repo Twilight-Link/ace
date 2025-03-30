@@ -8,8 +8,6 @@ import Principal from "./homepage/Principal";
 import HallOfFame from "./homepage/halloffame";
 import Epoch from "./homepage/epoch";
 import NewsAndUpdates from "./homepage/NewsAndUpdates";
-import { CursorProvider } from "./component/cursor/CoursorContext";
-import CursorAnimation from "./component/cursor/CoursorAnimation";
 
 
 export default function Home() {
