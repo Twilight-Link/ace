@@ -133,8 +133,8 @@ export default function CourcesList() {
                 <div className="overflow-y-scroll h-96 scroll-smooth scrollbar-hide">
                     <ul role="list" className="divide-y divide-gray-100">
                         {Cources.map((cource, index) => (
-                            <li key={index} className={selectedItem == index ? "flex justify-between gap-x-6 py-5 bg-gray-100" : "flex justify-between gap-x-6 py-5"}>
-                                <div className={"flex min-w-0 gap-x-4"} onClick={() => { setGif(cource.gif); setSelectedItem(index) }}>
+                            <li key={index} className={selectedItem == index ? "flex justify-between gap-x-6 py-5 bg-gray-100" : "flex justify-between gap-x-6 py-5"} onClick={() => { setGif(cource.gif); setSelectedItem(index) }}>
+                                <div className={"flex min-w-0 gap-x-4"}>
                                     <img alt="" src={cource.imageUrl} className="size-12 flex-none" />
                                     <div className="min-w-0 flex-auto">
                                         <p className="text-lg font-bold font-inter capitalize text-gray-900">{cource.courceName}</p>
