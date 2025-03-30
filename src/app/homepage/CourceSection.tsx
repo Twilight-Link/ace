@@ -1,6 +1,7 @@
 'use client'
-import { useState } from "react"
-
+import useMouse from "@react-hook/mouse-position"
+import { motion } from "framer-motion"
+import { useRef, useState } from "react"
 export default function CourcesList() {
 
     const Cources = [
@@ -52,10 +53,78 @@ export default function CourcesList() {
     const [currentGif, setGif] = useState(Cources[selectedItem].gif)
 
 
+    const [cursorText, setCursorText] = useState("");
+    const [cursorVariant, setCursorVariant] = useState("default");
+
+    const ref = useRef(null);
+    const mouse = useMouse(ref, {
+        enterDelay: 100,
+        leaveDelay: 100
+    });
+
+    let mouseXPosition = 0;
+    let mouseYPosition = 0;
+    mouseXPosition = mouse.clientX ?? 0;
+    mouseYPosition = mouse.clientY ?? 0;
+    const variants = {
+        default: {
+            opacity: 0,
+            height: 10,
+            width: 10,
+            fontSize: "16px",
+            backgroundColor: "#4c52e6",
+            x: mouseXPosition,
+            y: mouseYPosition,
+            transition: {
+                type: "spring",
+                mass: 0.6
+            }
+        },
+        project: {
+            opacity: 1,
+            // backgroundColor: "rgba(255, 255, 255, 0.6)",
+            backgroundColor: "#00000",
+            color: "#fff",
+            height: 80,
+            width: 150,
+            fontSize: "18px",
+            x: mouseXPosition - 32,
+            y: mouseYPosition - 32
+        },
+    };
+
+    const spring = {
+        type: "spring",
+        stiffness: 500,
+        damping: 28
+    };
+
+    function projectEnter() {
+        setCursorText("Register");
+        setCursorVariant("project");
+    }
+
+    function projectLeave() {
+        setCursorText("");
+        setCursorVariant("default");
+    }
 
 
 
-    return (<div className="w-full relative py-10 bg-white flex flex-col gap-4 z-10">
+
+
+
+    return (<div className="w-full relative py-10 bg-white flex flex-col gap-4 z-10" ref={ref}>
+
+        <motion.div
+            variants={variants}
+            className="circle fixed top-0 left-0 z-[100] flex flex-row items-center justify-center h-[10px] w-[10px] bg-[#1e91d6] rounded-full pointer-events-none text-white text-[16px]"
+            animate={cursorVariant}
+            transition={spring}
+        >
+            <span className="cursorText">{cursorText}</span>
+        </motion.div>
+
         <h1 className="w-full text-center text-5xl font-inter font-bold text-black">Explore our courses</h1>
         <h3 className="w-full text-center text-3xl font inter font-medium text-black">Shaping future engineers with cutting-edge skills.</h3>
 
@@ -64,8 +133,8 @@ export default function CourcesList() {
                 <div className="overflow-y-scroll h-96 scroll-smooth scrollbar-hide">
                     <ul role="list" className="divide-y divide-gray-100">
                         {Cources.map((cource, index) => (
-                            <li key={index} className="flex justify-between gap-x-6 py-5">
-                                <div className="flex min-w-0 gap-x-4" onClick={() => { setGif(cource.gif) }}>
+                            <li key={index} className={selectedItem == index ? "flex justify-between gap-x-6 py-5 bg-gray-100" : "flex justify-between gap-x-6 py-5"}>
+                                <div className={"flex min-w-0 gap-x-4"} onClick={() => { setGif(cource.gif); setSelectedItem(index) }}>
                                     <img alt="" src={cource.imageUrl} className="size-12 flex-none" />
                                     <div className="min-w-0 flex-auto">
                                         <p className="text-lg font-bold font-inter capitalize text-gray-900">{cource.courceName}</p>
@@ -77,7 +146,7 @@ export default function CourcesList() {
                     </ul>
                 </div>
 
-                <img src={currentGif} className="w-96 mx-32" />
+                <img src={currentGif} className="w-96 mx-32" onMouseLeave={projectLeave} onMouseEnter={projectEnter} />
 
 
 
@@ -94,6 +163,6 @@ export default function CourcesList() {
 
 
 
-    </div>)
+    </div >)
 
 }

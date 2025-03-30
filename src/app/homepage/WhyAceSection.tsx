@@ -1,7 +1,8 @@
 'use client'
+import useMouse from "@react-hook/mouse-position";
 import BentoGrid2 from "../component/Bentogrid2";
 import { motion, useAnimation, useInView } from 'framer-motion'
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function WhyAceSection() {
     const scrollRef = useRef(null);
@@ -13,8 +14,6 @@ export default function WhyAceSection() {
             mainDivController.start("visible");
         }
     }, [isInview])
-
-
     const heroTitleSectiion = {
         hidden: { opacity: 0, y: 75 },
         visible: {
@@ -32,20 +31,109 @@ export default function WhyAceSection() {
         },
     }
 
+    const [cursorText, setCursorText] = useState("");
+    const [cursorVariant, setCursorVariant] = useState("default");
+
+    const ref = useRef(null);
+    const mouse = useMouse(ref, {
+        enterDelay: 100,
+        leaveDelay: 100
+    });
+
+    let mouseXPosition = 0;
+    let mouseYPosition = 0;
+
+    if (mouse.x !== null) {
+        mouseXPosition = mouse.clientX ?? 0;
+    }
+
+    if (mouse.y !== null) {
+        mouseYPosition = mouse.clientY ?? 0;
+    }
+
+    const variants = {
+        default: {
+            opacity: 0,
+            height: 10,
+            width: 10,
+            fontSize: "16px",
+            backgroundColor: "#4c52e6",
+            x: mouseXPosition,
+            y: mouseYPosition,
+            transition: {
+                type: "spring",
+                mass: 0.6
+            }
+        },
+        project: {
+            opacity: 1,
+            backgroundColor: "#fff",
+            color: "#4c52e6",
+            height: 50,
+            width: 150,
+            fontSize: "18px",
+            x: mouseXPosition - 32,
+            y: mouseYPosition - 32
+        },
+    };
+
+    const spring = {
+        type: "spring",
+        stiffness: 500,
+        damping: 28
+    };
+
+    function projectEnter() {
+        setCursorText("Gallery ➜");
+        setCursorVariant("project");
+    }
+
+    function projectLeave() {
+        setCursorText("");
+        setCursorVariant("default");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
     return (
         <div className="overflow-hidden py-4 sm:py-6 select-none relative"
-        style={{
-            background: "black",
-            backgroundRepeat: "no-repeat",
-            backgroundSize:"50%",
-            backgroundImage: "url('backgroundSvg/svg-whyAce.png')",
-            backgroundPosition: "bottom right",
-          }}>
+            ref={ref}
+            style={{
+                background: "black",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "50%",
+                backgroundImage: "url('backgroundSvg/svg-whyAce.png')",
+                backgroundPosition: "bottom right",
+            }}>
+
+
+
+
+
+
 
             <img src="/backgroundSvg/svg_why_ace.svg" className="absolute left-96 "></img>
 
             <div className="mx-auto max-w-7xl px-6 lg:px-8" ref={scrollRef}>
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+                    <motion.div
+                        variants={variants}
+                        className="circle fixed top-0 left-0 z-[100] flex flex-row items-center justify-center h-[10px] w-[10px] bg-[#1e91d6] rounded-full pointer-events-none text-white text-[16px]"
+                        animate={cursorVariant}
+                        transition={spring}
+                    >
+                        <span className="cursorText">{cursorText}</span>
+                    </motion.div>
                     <motion.div
                         variants={heroTitleSectiion}
                         initial="hidden"
@@ -68,7 +156,10 @@ export default function WhyAceSection() {
 
 
 
+
                     <motion.div
+                        onMouseEnter={projectEnter}
+                        onMouseLeave={projectLeave}
                         initial="hidden"
                         animate={mainDivController}
                         variants={GridSectiion}

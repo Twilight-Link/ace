@@ -19,7 +19,7 @@ export default function Principal(){
             </div>
             <div className="flex flex-col md:flex-col lg:flex-row justify-around items-center flex-wrap gap-2 p-4 h-auto">
                 <img src="principalphoto.jpg" className=" md:w-[90%] lg:w-[42%]  rounded-[29px]"/>
-                <div className="pb-8 text-[#040404] font-medium  font-inter capitalize text-2xl leading-[1.2] lg:w-[42%]">
+                <div className="pb-8 text-black font-normal  font-inter capitalize text-xl leading-[1.2] lg:w-[42%]">
                     Meet Our Principal<br/><br/> Dr. Farrukh Sayeed is a visionary academic leader dedicated to nurturing student excellence through a 
                     perfect blend of academics and extracurricular activities. Under his dynamic leadership, ACE College of Engineering fosters 
                     a culture of holistic development, empowering students with leadership, teamwork, and communication skills. <br/><br/>With an unwavering 
