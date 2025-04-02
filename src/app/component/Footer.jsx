@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
         
         <div className="relative top-[-66px] text-xl">
-        <img src="/logos/Footerlogo/ACE LOGO copy.png" className="h-[200px]" alt="logo" />
+        <img src="/logos/FooterLogo/ACE LOGO copy.png" className="h-[200px]" alt="logo" />
           <p className="max-w-xs ml-2  mt-0  text-white/60">
            
             info@Acetvm.Com
@@ -27,19 +27,19 @@ const Footer = () => {
           </p>
           <div className="flex mt-8 space-x-6">
             <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
-            <img src="logos/Footerlogo/icons8-facebook-50.png" alt="Facebook" className="w-10 h-10" />
+            <img src="logos/FooterLogo/icons8-facebook-50.png" alt="Facebook" className="w-10 h-10" />
             </a>
             <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
-            <img src="logos/Footerlogo\icons8-instagram-100.png" alt="Instagram" className="w-10 h-10" />
+            <img src="logos/FooterLogo/icons8-instagram-100.png" alt="Instagram" className="w-10 h-10" />
             </a>
             <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
-            <img src="logos/Footerlogo\icons8-whatsapp-50.png" alt="Whatsapp" className="w-10 h-10" />
+            <img src="logos/FooterLogo/icons8-whatsapp-50.png" alt="Whatsapp" className="w-10 h-10" />
             </a>
             <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
-            <img src="logos/Footerlogo\icons8-twitter-50.png" alt="Twitter" className="w-10 h-10" />
+            <img src="logos/FooterLogo\icons8-twitter-50.png" alt="Twitter" className="w-10 h-10" />
             </a>
             <a className="hover:opacity-75" href="#" target="_blank" rel="noreferrer">
-            <img src="logos/Footerlogo\icons8-linkedin-50.png" alt="linkedin" className="w-10 h-10" />
+            <img src="logos/FooterLogo/icons8-linkedin-50.png" alt="linkedin" className="w-10 h-10" />
             </a>
           </div>
         </div>

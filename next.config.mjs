@@ -5,7 +5,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
 
-  output: "export",
+  // output: "export",
 };
 
 export default nextConfig;

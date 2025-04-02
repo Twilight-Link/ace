@@ -22,11 +22,11 @@ export default function Industries() {
     }, [isInview]);
 
     return (
-        <motion.div
-            ref={scrollRef}
-            variants={divVarients}
-            initial="hidden"
-            animate={mainDivController}
+        <div
+            // ref={scrollRef}
+            // variants={divVarients}
+            // initial="hidden"
+            // animate={mainDivController}
             className="relative w-full max-w-[100vw] bg-gradient-to-r flexflex-col items-center pt-[12dvh] pb-[18dvh]"
             style={{
                 background: "black",
@@ -62,6 +62,6 @@ export default function Industries() {
                     whileHover={{ scale: 1.3 }}
                     transition={{ type: "spring", stiffness: 300 }} src="logos/industriesLogo\mahindra_logo.svg" className="w-[13.02vw] h-[12.02vw]" />
             </div>
-        </motion.div>
+        </div>
     );
 }
