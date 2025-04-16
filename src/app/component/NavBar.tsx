@@ -58,14 +58,14 @@ export default function NavBar() {
 
     return (
         <header className="bg-white font-inter select-none">
-            <nav aria-label="Global" className="mx-auto bg-white flex max-w-7xl items-center justify-between p-4 lg:px-8">
+            <nav aria-label="Global" className="mx-auto bg-white flex max-w-full items-center justify-between p-4 lg:px-8">
                 <div className="flex lg:flex-1">
-                    <a href="#" className="-m-1.5 p-1.5">
+                    <a href="#" className="-m-1.5 -ml-4 p-0">
                         <span className="sr-only">Ace College of Engineering</span>
                         <img
                             alt=""
-                            src="/logos/acecollage.png"
-                            className="w-auto h-[40px]"
+                            src="/logos/ACE.png"
+                            className="w-auto h-[50px]"
                         />
                     </a>
                 </div>
@@ -190,7 +190,7 @@ export default function NavBar() {
 
                 </PopoverGroup>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <img src='/logos/leaf_logo (1).png' className='w-auto h-[40px]' />
+                    <img src='/logos/leaf_logo (1).png' className='w-auto h-[65px] absolute top-1 right-1' />
                 </div>
             </nav>
 
@@ -232,7 +232,7 @@ export default function NavBar() {
                                     href="#"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                                 >
-                                    Adminssion
+                                    Admission
                                 </a>
 
 
