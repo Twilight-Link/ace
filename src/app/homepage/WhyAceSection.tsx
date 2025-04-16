@@ -31,67 +31,6 @@ export default function WhyAceSection() {
         },
     }
 
-    const [cursorText, setCursorText] = useState("");
-    const [cursorVariant, setCursorVariant] = useState("default");
-
-    const ref = useRef(null);
-    const mouse = useMouse(ref, {
-        enterDelay: 100,
-        leaveDelay: 100
-    });
-
-    let mouseXPosition = 0;
-    let mouseYPosition = 0;
-
-    if (mouse.x !== null) {
-        mouseXPosition = mouse.clientX ?? 0;
-    }
-
-    if (mouse.y !== null) {
-        mouseYPosition = mouse.clientY ?? 0;
-    }
-
-    const variants = {
-        default: {
-            opacity: 0,
-            height: 10,
-            width: 10,
-            fontSize: "16px",
-            backgroundColor: "#4c52e6",
-            x: mouseXPosition,
-            y: mouseYPosition,
-            transition: {
-                type: "spring",
-                mass: 0.6
-            }
-        },
-        project: {
-            opacity: 1,
-            backgroundColor: "#fff",
-            color: "#4c52e6",
-            height: 50,
-            width: 150,
-            fontSize: "18px",
-            x: mouseXPosition - 32,
-            y: mouseYPosition - 32
-        },
-    };
-
-    const spring = {
-        type: "spring",
-        stiffness: 500,
-        damping: 28
-    };
-
-    function projectEnter() {
-        setCursorText("Gallery ➜");
-        setCursorVariant("project");
-    }
-
-    function projectLeave() {
-        setCursorText("");
-        setCursorVariant("default");
-    }
 
 
 
@@ -107,7 +46,6 @@ export default function WhyAceSection() {
 
     return (
         <div className="overflow-hidden py-4 sm:py-6 select-none relative"
-            ref={ref}
             style={{
                 background: "black",
                 backgroundRepeat: "no-repeat",
@@ -127,14 +65,6 @@ export default function WhyAceSection() {
             <div className="mx-auto max-w-7xl px-6 lg:px-8" ref={scrollRef}>
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                     <motion.div
-                        variants={variants}
-                        className="circle fixed top-0 left-0 z-[100] flex flex-row items-center justify-center h-[10px] w-[10px] bg-[#1e91d6] rounded-full pointer-events-none text-white text-[16px]"
-                        animate={cursorVariant}
-                        transition={spring}
-                    >
-                        <span className="cursorText">{cursorText}</span>
-                    </motion.div>
-                    <motion.div
                         variants={heroTitleSectiion}
                         initial="hidden"
                         animate={mainDivController}
@@ -144,7 +74,7 @@ export default function WhyAceSection() {
                                 <h1 className="font-black capitalize text-6xl leading-[1.2] max-w-2xl text-start">
                                     Why<span className='text-[#4c52e6]'> ACE</span> <br /> College of  <br /> <span className='text-[#4c52e6]' >Engineering ?</span>
                                 </h1>
-                                <p className="text-[#c8c6c6] font-medium capitalize text-base leading-[1.2] relative max-w-xl">
+                                <p className="text-[#c8c6c6] font-normal text-lg capitalize  leading-[1.2] relative max-w-xl">
                                     ACE College of Engineering, founded in 2013 by Manarul Huda Trust, is a leading institution in Thiruvananthapuram, known for its excellence in professional and value-based education. With advanced facilities and a strong focus on technical and ethical growth, ACE nurtures young minds, empowering them for a bright future.
                                 </p>
                                 <a href="#" className="rounded-md bg-[#4c52e6] px-3.5 py-2.5 w-fit text-lg  text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Explore 360</a>
@@ -154,18 +84,8 @@ export default function WhyAceSection() {
                         </div>
                     </motion.div>
 
+                    <BentoGrid2 />
 
-
-
-                    <motion.div
-                        onMouseEnter={projectEnter}
-                        onMouseLeave={projectLeave}
-                        initial="hidden"
-                        animate={mainDivController}
-                        variants={GridSectiion}
-                    >
-                        <BentoGrid2 />
-                    </motion.div>
 
 
 

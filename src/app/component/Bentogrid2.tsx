@@ -4,7 +4,7 @@ import { motion, useAnimation, useInView } from 'framer-motion'
 export default function BentoGrid2() {
 
     return (
-        <div className="relative">
+        <div className="relative m-auto w-full h-full">
             <div
                 aria-hidden="true"
                 className="lg:absolute lg:inset-y-0"
