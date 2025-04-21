@@ -57,8 +57,8 @@ export default function NavBar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <header className="bg-white font-inter select-none">
-            <nav aria-label="Global" className="mx-auto bg-white flex max-w-full items-center justify-between p-4 lg:px-8">
+        <header className="bg-white font-inter select-none z-50">
+            <nav aria-label="Global" className="mx-auto bg-white flex max-w-full items-center justify-between p-4 lg:px-8 z-50">
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 -ml-4 p-0">
                         <span className="sr-only">Ace College of Engineering</span>
@@ -80,11 +80,11 @@ export default function NavBar() {
                     </button>
                 </div>
                 <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-                    <a href="#" className="text-sm/6 font-semibold text-gray-900">
+                    <a href="#" className="text-lg font-semibold text-gray-900">
                         Admission
                     </a>
                     <Popover className="relative">
-                        <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">
+                        <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-900">
                             About Us
                             <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
                         </PopoverButton>
@@ -97,7 +97,7 @@ export default function NavBar() {
                                 {Aboutus.map((item) => (
                                     <div
                                         key={item.name}
-                                        className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm/6 hover:bg-gray-50"
+                                        className="group relative flex items-center gap-x-6 rounded-lg p-2 text-lg hover:bg-gray-50"
                                     >
                                         <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                                             <item.icon aria-hidden="true" className="size-6 text-gray-600 group-hover:text-indigo-600" />
@@ -117,7 +117,7 @@ export default function NavBar() {
 
 
                     <Popover className="relative">
-                        <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">
+                        <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-900">
                             Departments
                             <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
                         </PopoverButton>
@@ -150,7 +150,7 @@ export default function NavBar() {
 
 
                     <Popover className="relative">
-                        <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">
+                        <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-900">
                             Gallery
                             <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
                         </PopoverButton>
@@ -182,14 +182,21 @@ export default function NavBar() {
                     </Popover>
 
 
-                    <a href="#" className="text-sm/6 font-semibold text-gray-900">
+                    {/* <a href="#" className="text-sm/6 font-semibold text-gray-900">
                         <Bars3Icon aria-hidden="true" className="size-6" />
-                    </a>
+                    </a> */}
 
 
 
                 </PopoverGroup>
-                <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+                <div className="hidden lg:flex flex-row gap-5 lg:flex-1 lg:justify-between mx-20 items-center">
+                    <div className="hidden lg:flex flex-row lg:flex-1 items-center gap-1">
+                        <div className='bg-indigo-600 p-3  rounded-full h-fit'>
+                            MHP
+                        </div>
+                        <img src='/icons/nac.png' className='w-auto h-[60px]' />
+                        <img src='/icons/national.png' className='w-auto h-[50px]' />
+                        </div>
                     <img src='/logos/leaf_logo (1).png' className='w-auto h-[65px] absolute top-1 right-1' />
                 </div>
             </nav>

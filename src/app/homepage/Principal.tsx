@@ -1,59 +1,80 @@
 'use client'
 import { useInView, useAnimation, motion } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
+import { Word } from "../component/wordComponent";
 
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
 export default function Principal() {
 
-    const scrollRef = useRef(null);
-    const isInview = useInView(scrollRef, { once: true });
-    const mainDivController = useAnimation();
-    const divVarients = {
-        hidden: { opacity: 0.5, y: 75 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 1, ease: "linear" },
+
+    const listofperson = [
+        {
+            name: "Dr. Farrukh Sayeed",
+            profession: "Principal, Ace College of Engineering",
+            words: 'Its my privilege to warmly welcome you to ACE College of Engineering, committed to achieve academic excellence by inspiring, transforming and developing young students and deliver them as effective and dynamic industry ready professionals."',
+            foregroundImg: "/principle/principle.jpg",
+            backgroundImg: "principle/principle.jpg"
         },
-    };
-
-    useEffect(() => {
-        if (isInview) {
-            mainDivController.start("visible");
+        {
+            name: "Dr. Farrukh Sayeed",
+            profession: "Principal, Ace College of Engineering",
+            words: 'Its my privilege to warmly welcome you to ACE College of Engineering, committed to achieve academic excellence by inspiring, transforming and developing young students and deliver them as effective and dynamic industry ready professionals."',
+            foregroundImg: "/principle/principle.jpg",
+            backgroundImg: "principle/principle.jpg"
         }
-    }, [isInview]);
+    ]
+
+    const [selectedImg, setImg] = useState(listofperson[0].backgroundImg)
 
 
 
 
-    return (
-        <div
-            className="relative w-full h-auto"
-            style={{
-                background: "white",
-                backgroundImage: "url('/backgroundSvg/svg_bg_princ_bottom.png'), url('/backgroundSvg/svg_bg_princ_top.png')",
-                backgroundSize: "50%, 100%",
-                backgroundRepeat: "no-repeat, no-repeat",
-                backgroundPosition: "bottom left, top right",
-            }}
-        // style={{
-        //     background: "linear-gradient(28deg, #4145cc 10%,white 30%, white 70%, #4145cc 90%)", // Create gradient with rotation and colors
-        // }}
-        >
 
-            <div className="font-black uppercase text-6xl text-black leading-[1.2] pt-16 pl-20 w-[42%]">
-                MEET OUR <p className="text-blue-700">PRINCIPAL</p>
-            </div>
-            <div className="flex flex-col md:flex-col lg:flex-row justify-around items-center flex-wrap gap-2 p-4 h-auto">
-                <img src="principalphoto.jpg" className=" md:w-[90%] lg:w-[42%]  rounded-[29px]" />
-                <div className="pb-8 text-black font-normal  font-inter capitalize text-xl leading-[1.2] lg:w-[42%]">
-                    Meet Our Principal<br /><br /> Dr. Farrukh Sayeed is a visionary academic leader dedicated to nurturing student excellence through a
-                    perfect blend of academics and extracurricular activities. Under his dynamic leadership, ACE College of Engineering fosters
-                    a culture of holistic development, empowering students with leadership, teamwork, and communication skills. <br /><br />With an unwavering
-                    commitment to innovation and excellence, Dr. Sayeed ensures that students have access to the right platforms and opportunities
-                    to unlock their full potential. His passion for education and mentorship continues to inspire the next generation of engineers
-                    and leaders.
-                </div>
-            </div>
-        </div>
-    )
+
+
+
+    return (<div className="w-full relative bg-black h-screen text-white flex items-center justify-center" >
+        <img src={selectedImg} className="w-full h-screen  object-cover bg-opacity-0 opacity-35 absolute top-0 left-0 inset-0 z-10" />
+
+
+        <div className="overflow-y-scroll scrollbar-hide max-h-[70vh] scroll-smooth  h-full">{
+            listofperson.map((person, index) => (
+                <motion.div
+                    viewport={{ amount: 0.7, once: true }}
+                    initial={{
+                        opacity: 0,
+                        scale: 0.5
+                    }}
+                    whileInView={{
+                        scale: 1,
+                        opacity: 1,
+                        transition: {
+                            duration: 1,
+                            ease: "easeIn"
+                        }
+                    }}
+                    onViewportEnter={() => setImg(person.backgroundImg)}
+                    className="">
+                    <div className="w-full max-w-7xl mx-auto flex flex-row my-auto h-fit z-50 justify-between align-middle">
+                        <h1 className="text-[100px] font-bold text-white font-serif z-50">"</h1>
+                        <h2 className="text-5xl font-serif p-11 text-white opacity-100 z-50">
+                            {person.words}
+                        </h2>
+                    </div>
+                    <div className="flex flex-row z-50 w-full max-w-7xl mx-auto mt-11 ">
+                        <img className="rounded-full size-20 object-cover z-50 ml-20 mr-9 my-5" src={person.foregroundImg} />
+                        <div className="z-50">
+                            <h1 className="mt-8 text-xl text-white z-50 font-semibold">{person.name}</h1>
+                            <h3 className="font-thin">{person.profession}</h3>
+                        </div>
+                    </div>
+                </motion.div>
+            ))
+        }</div>
+    </div>)
+
+
+
 }

@@ -20,6 +20,27 @@ const config: Config = {
           'inter',
           'sans'
         ],
+        Bangers: [
+          'Bangers'
+        ],
+        doubleXcomp: [
+          'doubleXcomp'
+        ],
+        Oswald: [
+          'oswald'
+        ],
+        Jersey25: [
+          'Jersey25'
+        ],
+        // SpaceGrotesk: [
+        //   'Space Grotesk',
+        //   'sans-serif'
+        // ],
+        space: ['var(--font-space-grotesk)', 'sans-serif'],
+        Gothic: [
+          'Special Gothic Condensed One',
+          'sans'
+        ],
       },
     },
   },

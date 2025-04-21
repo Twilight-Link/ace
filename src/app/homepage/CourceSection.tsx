@@ -1,7 +1,7 @@
 'use client'
 import useMouse from "@react-hook/mouse-position"
 import { motion } from "framer-motion"
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 export default function CourcesList() {
 
     const Cources = [
@@ -48,6 +48,8 @@ export default function CourcesList() {
 
 
     ]
+    const [progress, setProgress] = useState(0);
+    const intervalTime = 3000; // 5 seconds
 
     const [selectedItem, setSelectedItem] = useState(0)
     const [currentGif, setGif] = useState(Cources[selectedItem].gif)
@@ -72,7 +74,6 @@ export default function CourcesList() {
             height: 10,
             width: 10,
             fontSize: "16px",
-            backgroundColor: "#4c52e6",
             x: mouseXPosition,
             y: mouseYPosition,
             transition: {
@@ -114,11 +115,11 @@ export default function CourcesList() {
 
 
 
-    return (<div className="w-full relative py-10 bg-white flex flex-col gap-4 z-10" ref={ref}>
+    return (<div className="w-full relative py-14 bg-white flex flex-col gap-4 z-10" ref={ref}>
 
         <motion.div
             variants={variants}
-            className="circle fixed top-0 left-0 z-[100] flex flex-row items-center justify-center h-[10px] w-[10px] bg-[#1e91d6] rounded-full pointer-events-none text-white text-[16px]"
+            className="circle fixed top-0 left-0 z-[100] flex flex-row items-center justify-center h-[10px] w-[10px] bg-transparent rounded-full pointer-events-none text-white text-[16px]"
             animate={cursorVariant}
             transition={spring}
         >
@@ -134,6 +135,7 @@ export default function CourcesList() {
                     <ul role="list" className="divide-y divide-gray-100">
                         {Cources.map((cource, index) => (
                             <li key={index} className={selectedItem == index ? "flex justify-between gap-x-6 py-5 bg-gray-100" : "flex justify-between gap-x-6 py-5"} onClick={() => { setGif(cource.gif); setSelectedItem(index) }}>
+
                                 <div className={"flex min-w-0 gap-x-4"}>
                                     <img alt="" src={cource.imageUrl} className="size-12 flex-none" />
                                     <div className="min-w-0 flex-auto">
@@ -141,19 +143,13 @@ export default function CourcesList() {
                                         <p className="mt-1 truncate text-xs/5 capitalize text-gray-500">{cource.description}</p>
                                     </div>
                                 </div>
+
                             </li>
                         ))}
                     </ul>
                 </div>
 
                 <img src={currentGif} className="w-96 mx-32" onMouseLeave={projectLeave} onMouseEnter={projectEnter} />
-
-
-
-
-
-
-
 
             </div>
         </div>

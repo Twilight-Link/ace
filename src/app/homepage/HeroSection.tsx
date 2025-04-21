@@ -61,7 +61,7 @@ export default function HeroSection() {
                             className="lg:max-w-lg">
                             <div className="relative w-max  flex flex-col gap-7">
                                 <h1 className="font-black capitalize text-6xl leading-[1.2] max-w-2xl text-start">
-                                    The <span className='text-[#4c52e6]'> best place</span>  to chase your <br /> <span className='text-[#4c52e6]' >dreams</span>
+                                    The <span className='text-[#6165f3]'> best place</span>  to chase your <br /> <span className='text-[#4c52e6]' >dreams</span>
                                 </h1>
                                 <p className="text-[#c8c6c6] font-medium capitalize text-md leading-[1.2] relative max-w-xl">
                                     The Best Place to Shape Your Future Ace College of Engineering is a center of excellence, fostering innovation and hands-on learning. Our dynamic campus and expert faculty prepare students for a successful caree
