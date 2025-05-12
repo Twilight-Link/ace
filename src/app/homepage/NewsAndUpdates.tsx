@@ -209,10 +209,10 @@ export default function NewsAndUpdates() {
         <div className="flex flex-col md:flex-row gap-8 p-12"
             style={{
                 background: "#a5b4fc",
-                backgroundRepeat: "no-repeat, no-repeat",
-                backgroundSize: "40%, 50%",
-                backgroundImage: "url('backgroundSvg/svg-newsUpdates-left.png'), url('backgroundSvg/svg-newsUpdates-right.png')",
-                backgroundPosition: "bottom left,bottom right",
+                // backgroundRepeat: "no-repeat, no-repeat",
+                // backgroundSize: "40%, 50%",
+                // backgroundImage: "url('backgroundSvg/svg-newsUpdates-left.png'), url('backgroundSvg/svg-newsUpdates-right.png')",
+                // backgroundPosition: "bottom left,bottom right",
             }}>
             {/* Left Div */}
             <div className="flex-1 h-full p-8">
