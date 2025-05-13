@@ -6,19 +6,19 @@ export default function CourcesList() {
 
     const Cources = [
         {
-            courceName: 'Electrical & electronics engineering',
-            description: 'focuses on the design, development, and application of electrical systems and electronic devices across various industries',
-            imageUrl:
-                '/icons/bolt.png',
-            gif: '/courcegifs/Electrician.gif'
-        },
-        {
             courceName: 'Aeronotical engineering',
             description: 'Explore the science of flight, aerospace technology, and aircraft design.',
             imageUrl:
                 '/icons/fly.png',
             gif: '/courcegifs/Flying around the world.gif'
 
+        },
+        {
+            courceName: 'Electrical & electronics engineering',
+            description: 'focuses on the design, development, and application of electrical systems and electronic devices across various industries',
+            imageUrl:
+                '/icons/bolt.png',
+            gif: '/courcegifs/Electrician.gif'
         },
         {
             courceName: 'mechatronics engineering',
@@ -134,7 +134,7 @@ export default function CourcesList() {
                 <div className="overflow-y-scroll h-96 scroll-smooth scrollbar-hide">
                     <ul role="list" className="divide-y divide-gray-100">
                         {Cources.map((cource, index) => (
-                            <li key={index} className={selectedItem == index ? "flex justify-between gap-x-6 py-5 bg-gray-100" : "flex justify-between gap-x-6 py-5"} onClick={() => { setGif(cource.gif); setSelectedItem(index) }}>
+                            <li key={index} className={selectedItem == index ? "flex justify-between gap-x-6 py-5 bg-gray-100" : "flex justify-between gap-x-6 py-5"} onMouseEnter={() => { setGif(cource.gif); setSelectedItem(index) }}>
 
                                 <div className={"flex min-w-0 gap-x-4"}>
                                     <img alt="" src={cource.imageUrl} className="size-12 flex-none" />

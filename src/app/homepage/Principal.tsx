@@ -35,7 +35,7 @@ export default function Principal() {
                 const nextIndex = swiperRef.current.realIndex; // Get the active slide index
                 setImg(listofperson[nextIndex].backgroundImg); // Update background image
             }
-        }, 3000); // Change slides every 3 seconds
+        }, 5000); // Change slides every 3 seconds
 
         return () => clearInterval(intervalId); // Clean up interval when the component is unmounted
     }, []);

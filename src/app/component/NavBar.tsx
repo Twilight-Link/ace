@@ -79,11 +79,11 @@ export default function NavBar() {
                         <Bars3Icon aria-hidden="true" className="size-6" />
                     </button>
                 </div>
-                <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+                <PopoverGroup className="hidden z-50 lg:flex lg:gap-x-12">
                     <a href="#" className="text-lg font-semibold text-gray-900">
                         Admission
                     </a>
-                    <Popover className="relative">
+                    <Popover className="relative z-50">
                         <PopoverButton className="flex items-center gap-x-1 text-lg font-semibold text-gray-900">
                             About Us
                             <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
@@ -210,9 +210,9 @@ export default function NavBar() {
 
             {/* mobile sections */}
             <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
-                <div className="fixed inset-0 z-10" />
-                <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-                    <div className="flex items-center justify-between">
+                <div className="fixed inset-0 z-50" />
+                <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                    <div className="flex items-center z-50 justify-between">
                         <a href="#" className="-m-1.5 p-1.5">
                             <span className="sr-only">Ace College of Engineering</span>
                             <img
